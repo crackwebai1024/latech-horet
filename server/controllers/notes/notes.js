@@ -41,6 +41,7 @@ const createNote = async (req, res) => {
         title: element.title,
         content: element.content,
         noteId: element.id,
+        userId: element.user_id,
       },
     });
   } catch (err) {
@@ -58,7 +59,7 @@ const updateNote = async (req, res) => {
     note.content = req.body.content;
 
     await note.save();
-    return res.status(200).json(note);
+    return res.status(200).json({ note });
   } catch (err) {
     console.log(err);
     return res.status(400).json({

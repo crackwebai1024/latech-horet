@@ -1,13 +1,10 @@
 import express from "express";
-import { requireSignin, hasAuthorization } from "../controllers/auth/auth";
-import {
-  getNotes,
-  createNote,
-  updateNote,
-  deleteNote,
-} from "../controllers/notes/notes";
+import authCtrl from "../controllers/auth/auth";
+import NoteCtrl from "../controllers/notes/notes";
 
 const router = express.Router();
+const { requireSignin, hasAuthorization } = authCtrl;
+const { getNotes, createNote, updateNote, deleteNote } = NoteCtrl;
 
 router
   .route("")
