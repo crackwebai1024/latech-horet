@@ -18,6 +18,13 @@
 
 # after running in local, for test you can run `npm run test`
 
+# before testing you have to call the signup endpoint with this credential
+
+{
+email: "test@lahore.com",
+password: "SuperUser123$",
+};
+
 ### api structure
 
 You can test api by using postman
